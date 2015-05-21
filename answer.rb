@@ -7,7 +7,7 @@ def sum_one_line l
   numbers_as_strings = l.chomp.split ","
   running_total = 0
   numbers_as_strings.each do |n|
-    running_total += n.to_i
+    running_total += n.to_f
   end
   return running_total
 end
