@@ -22,4 +22,18 @@ lines.each do |line|
   running_total += s
 end
 
+# lines.map { |l| l.split(",").map { |n| n.to_i } }.flatten.reduce(:+)
+
 puts "Sum of file: #{running_total}"
+
+# 3. how many numbers in this file
+
+ns = 0
+lines.each do |i|
+  number_of_numbers += i.split(",").count
+end
+
+# Other functional options
+n2 = lines.map { |l| l.split(",") }.flatten.count
+n3 = lines.map { |l| l.split(",").count }.reduce :+
+binding.pry
